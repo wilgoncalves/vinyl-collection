@@ -1,0 +1,6 @@
+<div *ngIf="vinyl">
+    <app-vinyl-form [btnTitulo]="btnTitulo" 
+                    [btnAcao]="btnAcao" 
+                    [dataVinyl]="vinyl" 
+                    (onSubmit)="editVinyl($event)"></app-vinyl-form>
+</div>

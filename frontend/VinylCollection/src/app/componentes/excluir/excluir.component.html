@@ -1,0 +1,16 @@
+<mat-card>
+  <div *ngIf="vinyl">
+    <h1 style="text-align: center;">Deseja excluir o disco da sua lista?</h1>
+    <div>
+      <h2>Artista:</h2>
+      <p>{{vinyl.artist}}</p>
+      <h2>Álbum:</h2>
+      <p>{{vinyl.title}}</p>
+    </div>
+
+    <div>
+      <button mat-stroked-button color="primary" (click)="excluir()">Confirmar!</button>
+      <button mat-stroked-button (click)="cancelar()">Voltar</button>
+    </div>
+  </div>
+</mat-card>

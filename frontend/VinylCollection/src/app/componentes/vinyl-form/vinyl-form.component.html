@@ -1,0 +1,34 @@
+<mat-card>
+  <h1>{{btnTitulo}}</h1>
+
+  <form [formGroup]="vinylForm" (ngSubmit)="submit()" #formDit="ngForm">
+
+    <input type="hidden" formControlName="id">
+
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label>Artista: </mat-label>
+        <input matInput type="text" formControlName="artist" placeholder="Insira o artista" required>
+      </mat-form-field>
+    </div>
+
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label>Álbum: </mat-label>
+        <input matInput type="text" formControlName="title" placeholder="Insira o nome do álbum" required>
+      </mat-form-field>
+    </div>
+
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label>Ano: </mat-label>
+        <input matInput type="number" formControlName="year" placeholder="Insira o ano do disco" required>
+      </mat-form-field>
+    </div>
+
+    <div class="btn-box">
+      <button type="submit" [disabled]="!vinylForm.valid" mat-raised-button color="warn">{{btnAcao}}</button>
+      <button routerLink="" mat-raised-button>Voltar</button>
+    </div>
+  </form>
+</mat-card>
